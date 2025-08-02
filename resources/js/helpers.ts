@@ -67,15 +67,31 @@ export const listJudulSurat = [
         value: 'Surat Kehilangan',
     },
     {
-        label: 'Surat Keterangan',
-        value: 'Surat Keterangan',
+        label: 'Surat Izin Keramaian Hajatan',
+        value: 'Surat Izin Keramaian Hajatan',
     },
     {
-        label: 'Surat Izin',
-        value: 'Surat Izin',
+        label: 'Surat Kelakuan Baik',
+        value: 'Surat Kelakuan Baik',
     },
     {
-        label: 'Surat Pengantar',
-        value: 'Surat Pengantar',
+        label: 'Surat Keterangan Domisili',
+        value: 'Surat Keterangan Domisili',
+    },
+    {
+        label: 'Surat Keterangan Bepergian',
+        value: 'Surat Keterangan Bepergian',
+    },
+    {
+        label: 'Surat Beda Nama',
+        value: 'Surat Beda Nama',
+    },
+    {
+        label: 'Surat Jalan',
+        value: 'Surat Jalan',
+    },
+    {
+        label: 'Surat Kuasa',
+        value: 'Surat Kuasa',
     },
 ]

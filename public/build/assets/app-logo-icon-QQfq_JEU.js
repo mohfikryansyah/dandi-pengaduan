@@ -1,0 +1,1 @@
+import{j as s}from"./app-DKM7dt8d.js";import{c as r}from"./utils-D17iiBiz.js";function m({props:a,className:o}){return s.jsx("img",{src:"/assets/images/logo-desa.png",className:r(o),alt:"Logo Univ"})}export{m as A};

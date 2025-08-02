@@ -1,0 +1,1 @@
+import{r as s}from"./app-DKM7dt8d.js";function m(u=!1){const[t,e]=s.useState(u),a=s.useCallback(()=>e(!0),[]),o=s.useCallback(()=>e(!1),[]),l=s.useCallback(()=>e(c=>!c),[]);return s.useMemo(()=>({state:t,setTrue:a,setFalse:o,setToggle:l,setState:e}),[t,a,o,l,e])}export{m as u};

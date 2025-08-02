@@ -1,1 +1,0 @@
-import{r as n,S as i,V as t}from"./app-1vksEiOn.js";function S(){const[s,e]=n.useState(!1);return{deleteItem:(a,r,o="Data berhasil dihapus!",u="Terjadi kesalahan saat menghapus data.",l={preserveState:!0})=>{e(!0),i.delete(route(a,r),{preserveState:l.preserveState,onSuccess:()=>{t.success(o),e(!1)},onError:()=>{t.error(u),e(!1)}})},isDeleting:s}}export{S as u};

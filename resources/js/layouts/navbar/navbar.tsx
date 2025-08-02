@@ -45,15 +45,15 @@ export default function Navbar() {
                 <div className="flex items-center space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
                     <div className="hidden items-center gap-2 md:flex">
                         <div className="hidden w-full items-center justify-between gap-2 md:order-1 md:flex md:w-auto" id="navbar-sticky">
-                            <ul className="mt-4 mr-5 flex flex-col rounded-lg bg-transparent p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
+                            {/* <ul className="mt-4 mr-5 flex flex-col rounded-lg bg-transparent p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
                                 {NAV_ITEMS.map((item) => (
                                     <NavLink key={item.label} {...item} />
                                 ))}
-                            </ul>
+                            </ul> */}
                             {auth.user ? (
                                 <Link
                                     href={route('dashboard')}
-                                    className="inline-block rounded-sm bg-transparent px-5 py-1.5 text-sm leading-normal font-medium text-white outline outline-yellow-50 transition-all duration-300 hover:-translate-y-0.5 transform"
+                                    className="inline-block transform rounded-sm bg-transparent px-5 py-1.5 text-sm leading-normal font-medium text-white outline outline-yellow-50 transition-all duration-300 hover:-translate-y-0.5"
                                 >
                                     Dashboard
                                 </Link>
@@ -61,13 +61,13 @@ export default function Navbar() {
                                 <>
                                     <Link
                                         href={route('login')}
-                                        className="inline-block rounded-sm bg-transparent px-5 py-1.5 text-sm leading-normal font-medium text-white outline hover:text-yellow-400 outline-white hover:outline-yellow-400 transition-all duration-300 hover:-translate-y-0.5  transform"
+                                        className="inline-block transform rounded-sm bg-transparent px-5 py-1.5 text-sm leading-normal font-medium text-white outline outline-white transition-all duration-300 hover:-translate-y-0.5 hover:text-yellow-400 hover:outline-yellow-400"
                                     >
                                         Log In
                                     </Link>
                                     <Link
                                         href={route('register')}
-                                        className="inline-block rounded-sm bg-yellow-400 px-5 py-1.5 text-sm leading-normal font-medium transition-all duration-300 hover:-translate-y-0.5  transform"
+                                        className="inline-block transform rounded-sm bg-yellow-400 px-5 py-1.5 text-sm leading-normal font-medium transition-all duration-300 hover:-translate-y-0.5"
                                     >
                                         Register
                                     </Link>
@@ -83,12 +83,35 @@ export default function Navbar() {
                                 <Menu />
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="left">
-                            <ul className="mt-4 flex flex-col gap-2 rounded-lg p-4 font-medium dark:border-gray-700 dark:bg-gray-800">
+                        <SheetContent side="left" className="p-4">
+                            {/* <ul className="mt-4 flex flex-col gap-2 rounded-lg p-4 font-medium dark:border-gray-700 dark:bg-gray-800">
                                 {NAV_ITEMS.map((item) => (
                                     <NavLink key={item.label} {...item} />
                                 ))}
-                            </ul>
+                            </ul> */}
+                            {auth.user ? (
+                                <Link
+                                    href={route('dashboard')}
+                                    className="inline-block transform rounded-sm bg-transparent px-5 py-1.5 text-sm leading-normal font-medium text-gray-800 outline outline-gray-800 transition-all duration-300 hover:-translate-y-0.5"
+                                >
+                                    Dashboard
+                                </Link>
+                            ) : (
+                                <>
+                                    <Link
+                                        href={route('login')}
+                                        className="inline-block transform rounded-sm bg-transparent px-5 py-1.5 text-sm leading-normal font-medium text-gray-800 outline outline-gray-800 transition-all duration-300 hover:-translate-y-0.5 hover:text-yellow-400 hover:outline-yellow-400"
+                                    >
+                                        Log In
+                                    </Link>
+                                    <Link
+                                        href={route('register')}
+                                        className="inline-block transform rounded-sm bg-yellow-400 px-5 py-1.5 text-sm leading-normal font-medium transition-all duration-300 hover:-translate-y-0.5"
+                                    >
+                                        Register
+                                    </Link>
+                                </>
+                            )}
                         </SheetContent>
                     </Sheet>
                 </div>
