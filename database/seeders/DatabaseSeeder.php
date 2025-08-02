@@ -25,11 +25,10 @@ class DatabaseSeeder extends Seeder
         $kadus4Role = Role::create(['name' => 'kadus_4']);
 
         User::factory()->create([
-            'name' => 'Mohamad Fiqriansyah Panu',
-            'username' => 'fiqriansyah',
-            'dusun' => 'Dusun Ilomata',
+            'name' => 'Admin',
+            'username' => 'admin',
             'avatar' => 'avatars/fiqriansyah.jpg',
-            'email' => 'moh.fikryansyah@gmail.com',
+            'email' => 'admin@gmail.com',
         ])->assignRole($adminRole);
 
         User::factory()->create([
